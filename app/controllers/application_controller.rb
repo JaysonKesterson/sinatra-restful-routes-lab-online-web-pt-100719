@@ -35,4 +35,10 @@ patch '/recipes/:id' do
   @recipe.save
   redirect to "/recipes/#{@recipe.id}"
 end
+
+delete '/recipes/:id' do 
+  @recipe = Recipe.find_by_id(params[:id])
+  @recipe.delete
+  redirect to '/recipes'
+end
 end

@@ -33,6 +33,6 @@ patch '/recipes/:id' do
   @recipe.title = params[:title]
   @recipe.content = params[:content]
   @recipe.save
-  redirect to "/recipes/#{@article.id}"
+  redirect to "/recipes/#{@recipe.id}"
 end
 end
